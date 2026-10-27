@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Satu Cahaya">
+  <defs>
+    <clipPath id="dome"><path d="M60 330 C60 205 118 120 200 120 C282 120 340 205 340 330 Q200 290 60 330 Z"/></clipPath>
+    <linearGradient id="domeFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity=".02"/>
+    </linearGradient>
+    <linearGradient id="rayFill" gradientUnits="userSpaceOnUse" x1="200" y1="130" x2="200" y2="330">
+      <stop offset="0" stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="400" height="400" rx="72" fill="#000"/>
+  <path d="M60 330 C60 205 118 120 200 120 C282 120 340 205 340 330 Q200 290 60 330 Z" fill="url(#domeFill)"/>
+  <g clip-path="url(#dome)" fill="url(#rayFill)"><path d="M198.43 149.94 L180.39 379.23 L219.61 379.23 L201.57 149.94 Z"/><path d="M203.82 149.63 L247.70 375.41 L289.59 363.40 L207.17 148.67 Z"/><path d="M192.83 148.67 L110.41 363.40 L152.30 375.41 L196.18 149.63 Z"/><path d="M209.39 147.66 L317.37 350.74 L364.01 318.68 L213.12 145.09 Z"/><path d="M186.88 145.09 L35.99 318.68 L82.63 350.74 L190.61 147.66 Z"/><path d="M214.86 143.38 L385.79 297.28 L422.75 243.50 L217.82 139.08 Z"/><path d="M182.18 139.08 L-22.75 243.50 L14.21 297.28 L185.14 143.38 Z"/></g>
+  <circle cx="200" cy="104" r="52" fill="url(#glow)"/>
+  <path d="M200.00 76.00 L207.05 94.29 L226.63 95.35 L211.41 107.71 L216.46 126.65 L200.00 116.00 L183.54 126.65 L188.59 107.71 L173.37 95.35 L192.95 94.29 Z" fill="#fff"/>
+  <path d="M60 330 Q200 290 340 330" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="200" cy="277" r="5.5" fill="#fff"/>
+  <path d="M194 287 a2 2 0 0 1 2 -2 h8 a2 2 0 0 1 2 2 v13 h-2.8 v10 h-2.6 v-9 h-1.2 v9 h-2.6 v-10 h-2.8 z" fill="#fff"/>
+  <circle cx="104" cy="362" r="3" fill="#fff"/>
+  <circle cx="132" cy="357" r="3.4" fill="#fff"/>
+  <circle cx="158" cy="351" r="3.8" fill="#fff"/>
+  <circle cx="180" cy="344" r="4.2" fill="#fff"/>
+  <circle cx="198" cy="336" r="4.6" fill="#fff"/>
+</svg>

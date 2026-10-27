@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #07111f;
+  --color-deep: #101c32;
+  --color-ivory: #f4efe5;
+  --color-gold: #e5c98b;
+  --color-mist: #a9b5c8;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --animate-rise: rise 0.9s ease-out both;
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  background: radial-gradient(120% 90% at 50% 0%, var(--color-deep) 0%, var(--color-midnight) 70%);
+  background-color: var(--color-midnight);
+  color: var(--color-ivory);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+dialog::backdrop {
+  background: rgb(7 17 31 / 0.75);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-delay: 0s !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== Intro (hitam-putih) ===== */
+.intro button:focus-visible { outline-color: #fff; }
+
+.i-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: i-draw 1.1s ease-out var(--d, 0s) both; }
+@keyframes i-draw { to { stroke-dashoffset: 0; } }
+
+.i-fade { opacity: 0; animation: i-fade 0.8s ease-out var(--d, 0s) both; }
+@keyframes i-fade { to { opacity: 1; } }
+
+.i-rise { opacity: 0; transform: translateY(8px); animation: i-rise 0.9s ease-out var(--d, 0s) both; }
+@keyframes i-rise { to { opacity: 1; transform: none; } }
+
+.i-pop {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0.2) rotate(-40deg);
+  animation: i-pop 1s cubic-bezier(0.2, 0.9, 0.3, 1.2) var(--d, 0s) both;
+}
+@keyframes i-pop { to { opacity: 1; transform: none; } }
+
+.i-glow {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: i-glow 1.4s ease-out var(--d, 0s) both;
+}
+@keyframes i-glow {
+  0% { opacity: 0; transform: scale(0.3); }
+  45% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.6; transform: scale(1); }
+}
+
+/* Berkas cahaya melebar dari bintang ke bawah. transform-origin dalam satuan viewBox SVG. */
+.i-ray {
+  opacity: 0;
+  transform-origin: 200px 130px;
+  transform: scale(0.15);
+  animation: i-ray 1s ease-out var(--d, 0s) both;
+}
+@keyframes i-ray { to { opacity: 1; transform: none; } }
